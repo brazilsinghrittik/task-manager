@@ -1,4 +1,4 @@
-/* General Styling */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,111 +7,103 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
     margin: 0;
 }
 
-.app-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.task-input-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-#taskInput {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-
-#taskInput:focus {
-    border-color: #007BFF;
-}
-
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #007BFF;
+header {
+    background-color: #333;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 20px;
+    text-align: center;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Task List */
-.task-list {
+nav ul {
     list-style-type: none;
     padding: 0;
 }
 
-.task-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fafafa;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
+nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-.task-item:hover {
-    background-color: #e9f2ff;
-}
-
-.task-item.completed {
-    text-decoration: line-through;
-    background-color: #e0e0e0;
-}
-
-.delete-btn {
-    background-color: #dc3545;
+nav ul li a {
     color: white;
-    padding: 5px 10px;
-    border: none;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.booking-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 5px;
-    cursor: pointer;
+    border: 1px solid #ccc;
 }
 
-.delete-btn:hover {
-    background-color: #c82333;
-}
-
-.complete-btn {
+button {
     background-color: #28a745;
     color: white;
-    padding: 5px 10px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.complete-btn:hover {
+button:hover {
     background-color: #218838;
+}
+
+.rooms {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.room {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.room h3 {
+    margin-bottom: 10px;
+}
+
+.room button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.room button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
