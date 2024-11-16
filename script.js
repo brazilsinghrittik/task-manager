@@ -1,50 +1,18 @@
-// Function to add a new task
-function addTask() {
-    const taskInput = document.getElementById("taskInput");
-    const taskText = taskInput.value.trim();
+// Handle form submission
+document.getElementById('bookingForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent page reload
 
-    if (taskText !== "") {
-        const taskList = document.getElementById("taskList");
+    const checkinDate = document.getElementById('checkin-date').value;
+    const checkoutDate = document.getElementById('checkout-date').value;
+    const roomType = document.getElementById('room-type').value;
 
-        // Create new task element
-        const taskItem = document.createElement("li");
-        taskItem.classList.add("task-item");
+    alert(`Booking successful!\nCheck-in Date: ${checkinDate}\nCheck-out Date: ${checkoutDate}\nRoom Type: ${roomType}`);
+});
 
-        // Task text
-        const taskTextElement = document.createElement("span");
-        taskTextElement.textContent = taskText;
-
-        // Mark as complete button
-        const completeButton = document.createElement("button");
-        completeButton.classList.add("complete-btn");
-        completeButton.textContent = "Complete";
-        completeButton.onclick = () => completeTask(taskItem);
-
-        // Delete button
-        const deleteButton = document.createElement("button");
-        deleteButton.classList.add("delete-btn");
-        deleteButton.textContent = "Delete";
-        deleteButton.onclick = () => deleteTask(taskItem);
-
-        // Append elements
-        taskItem.appendChild(taskTextElement);
-        taskItem.appendChild(completeButton);
-        taskItem.appendChild(deleteButton);
-
-        // Add task to the list
-        taskList.appendChild(taskItem);
-
-        // Clear input field
-        taskInput.value = "";
-    }
-}
-
-// Function to mark a task as complete
-function completeTask(taskItem) {
-    taskItem.classList.toggle("completed");
-}
-
-// Function to delete a task
-function deleteTask(taskItem) {
-    taskItem.remove();
-}
+// Booking button functionality
+const bookButtons = document.querySelectorAll('.room button');
+bookButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Room booked!');
+    });
+});
