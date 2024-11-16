@@ -3,19 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <h1>Task Manager</h1>
-        <div class="task-input-container">
-            <input type="text" id="taskInput" placeholder="Add a new task..." />
-            <button onclick="addTask()">Add</button>
+    <header>
+        <h1>Hotel Paradise</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Rooms</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-form">
+        <h2>Book Your Stay</h2>
+        <form id="bookingForm">
+            <label for="checkin-date">Check-in Date:</label>
+            <input type="date" id="checkin-date" required>
+
+            <label for="checkout-date">Check-out Date:</label>
+            <input type="date" id="checkout-date" required>
+
+            <label for="room-type">Room Type:</label>
+            <select id="room-type" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section class="rooms">
+        <h2>Available Rooms</h2>
+        <div class="room-list">
+            <div class="room">
+                <h3>Single Room</h3>
+                <p>$100 per night</p>
+                <button>Book Now</button>
+            </div>
+            <div class="room">
+                <h3>Double Room</h3>
+                <p>$150 per night</p>
+                <button>Book Now</button>
+            </div>
+            <div class="room">
+                <h3>Suite</h3>
+                <p>$250 per night</p>
+                <button>Book Now</button>
+            </div>
         </div>
-        <ul id="taskList" class="task-list">
-        </ul>
-    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Paradise | All rights reserved</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
